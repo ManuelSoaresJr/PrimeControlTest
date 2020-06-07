@@ -1,0 +1,48 @@
+2020-06-06 18:50:38 - INFO - Teste PrimeControl - Processo teste PrimeControl iniciado. 
+2020-06-06 18:50:38 - INFO - Obter Ip Dinamicamente - Task iniciada. 
+2020-06-06 18:50:44 - DEBUG - Obter Ip Dinamicamente - Obter Ip externo concluído - 191.254.103.198. 
+2020-06-06 18:50:46 - INFO - Login Clash Royale API Website - Task iniciada. 
+2020-06-06 18:50:51 - DEBUG - Login Clash Royale API Website - Acessar URL concluído. 
+2020-06-06 18:50:52 - DEBUG - Login Clash Royale API Website - Clicar em Login concluído. 
+2020-06-06 18:50:53 - DEBUG - Login Clash Royale API Website - Realizar Login concluído. 
+2020-06-06 18:50:53 - INFO - Criar Nova Chave - Task Criar Nova Chave iniciada. 
+2020-06-06 18:50:53 - DEBUG - Criar Nova Chave - Clicar em dropdown button concluído. 
+2020-06-06 18:50:53 - DEBUG - Criar Nova Chave - Clicar em account menu concluído. 
+2020-06-06 18:50:53 - DEBUG - Criar Nova Chave - Clicar em create new key concluído. 
+2020-06-06 18:50:54 - DEBUG - Criar Nova Chave - Create new key concluído. 
+2020-06-06 18:50:57 - DEBUG - Criar Nova Chave - Acessar detalhes da nova chave concluído. 
+2020-06-06 18:50:57 - DEBUG - Criar Nova Chave - Recuperar Token concluído - eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjZjYzIwMGFjLWE2YTYtNDEwYy1iOGFiLThlMmYwMjdkNWRkZSIsImlhdCI6MTU5MTQ4MDI1NCwic3ViIjoiZGV2ZWxvcGVyL2EyNTE1MTk5LTczY2UtOGQ1MC0wOTljLTdiYWM2M2Y1NjgzNSIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyIxOTEuMjU0LjEwMy4xOTgiXSwidHlwZSI6ImNsaWVudCJ9XX0.HlrdmLfsLkCXqKHrRy9YwBiJEdOinsYY97Cab3fKWBH0P2jvTHRgmWJc44XtVU96Gcty6Q9O6SO1O1d-BPQVlQ. 
+2020-06-06 18:50:59 - INFO - Gerar csv - Task Gerar csv iniciada. 
+2020-06-06 18:51:03 - DEBUG - Gerar csv - Gerar csv concluído. 
+2020-06-06 18:51:16 - INFO - Teste PrimeControl - Processo teste PrimeControl iniciado. 
+2020-06-06 18:51:16 - INFO - Obter Ip Dinamicamente - Task iniciada. 
+2020-06-06 18:51:26 - DEBUG - Obter Ip Dinamicamente - Obter Ip externo concluído - 191.254.103.198. 
+2020-06-06 18:51:28 - INFO - Login Clash Royale API Website - Task iniciada. 
+2020-06-06 18:51:37 - DEBUG - Login Clash Royale API Website - Acessar URL concluído. 
+2020-06-06 18:51:37 - DEBUG - Login Clash Royale API Website - Clicar em Login concluído. 
+2020-06-06 18:51:38 - DEBUG - Login Clash Royale API Website - Realizar Login concluído. 
+2020-06-06 18:51:38 - INFO - Criar Nova Chave - Task Criar Nova Chave iniciada. 
+2020-06-06 18:51:38 - DEBUG - Criar Nova Chave - Clicar em dropdown button concluído. 
+2020-06-06 18:51:38 - DEBUG - Criar Nova Chave - Clicar em account menu concluído. 
+2020-06-06 18:51:39 - DEBUG - Criar Nova Chave - Clicar em create new key concluído. 
+2020-06-06 18:51:39 - DEBUG - Criar Nova Chave - Create new key concluído. 
+2020-06-06 18:51:42 - DEBUG - Criar Nova Chave - Acessar detalhes da nova chave concluído. 
+2020-06-06 18:51:42 - DEBUG - Criar Nova Chave - Recuperar Token concluído - eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjZjYzIwMGFjLWE2YTYtNDEwYy1iOGFiLThlMmYwMjdkNWRkZSIsImlhdCI6MTU5MTQ4MDI1NCwic3ViIjoiZGV2ZWxvcGVyL2EyNTE1MTk5LTczY2UtOGQ1MC0wOTljLTdiYWM2M2Y1NjgzNSIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyIxOTEuMjU0LjEwMy4xOTgiXSwidHlwZSI6ImNsaWVudCJ9XX0.HlrdmLfsLkCXqKHrRy9YwBiJEdOinsYY97Cab3fKWBH0P2jvTHRgmWJc44XtVU96Gcty6Q9O6SO1O1d-BPQVlQ. 
+2020-06-06 18:51:45 - INFO - Gerar csv - Task Gerar csv iniciada. 
+2020-06-06 18:51:45 - ERROR - Criar Nova Chave - {'status': 'Erro ao recuperar localização', 'details': 'Traceback (most recent call last):\n  File "c:\\program files (x86)\\python\\lib\\urllib\\request.py", line 1350, in do_open\n    h.request(req.get_method(), req.selector, req.data, headers,\n  File "c:\\program files (x86)\\python\\lib\\http\\client.py", line 1240, in request\n    self._send_request(method, url, body, headers, encode_chunked)\n  File "c:\\program files (x86)\\python\\lib\\http\\client.py", line 1286, in _send_request\n    self.endheaders(body, encode_chunked=encode_chunked)\n  File "c:\\program files (x86)\\python\\lib\\http\\client.py", line 1235, in endheaders\n    self._send_output(message_body, encode_chunked=encode_chunked)\n  File "c:\\program files (x86)\\python\\lib\\http\\client.py", line 1006, in _send_output\n    self.send(msg)\n  File "c:\\program files (x86)\\python\\lib\\http\\client.py", line 946, in send\n    self.connect()\n  File "c:\\program files (x86)\\python\\lib\\http\\client.py", line 1402, in connect\n    super().connect()\n  File "c:\\program files (x86)\\python\\lib\\http\\client.py", line 917, in connect\n    self.sock = self._create_connection(\n  File "c:\\program files (x86)\\python\\lib\\socket.py", line 787, in create_connection\n    for res in getaddrinfo(host, port, 0, SOCK_STREAM):\n  File "c:\\program files (x86)\\python\\lib\\socket.py", line 918, in getaddrinfo\n    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):\nsocket.gaierror: [Errno 11001] getaddrinfo failed\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File "C:\\vsworkspaces\\Robotframework\\PrimeControlTest\\resources\\generateClanMembersCsv.py", line 23, in makeApiCall\n    return json.loads(urllib.request.urlopen(request).read().decode("utf-8"))\n  File "c:\\program files (x86)\\python\\lib\\urllib\\request.py", line 222, in urlopen\n    return opener.open(url, data, timeout)\n  File "c:\\program files (x86)\\python\\lib\\urllib\\request.py", line 525, in open\n    response = self._open(req, data)\n  File "c:\\program files (x86)\\python\\lib\\urllib\\request.py", line 542, in _open\n    result = self._call_chain(self.handle_open, protocol, protocol +\n  File "c:\\program files (x86)\\python\\lib\\urllib\\request.py", line 502, in _call_chain\n    result = func(*args)\n  File "c:\\program files (x86)\\python\\lib\\urllib\\request.py", line 1393, in https_open\n    return self.do_open(http.client.HTTPSConnection, req,\n  File "c:\\program files (x86)\\python\\lib\\urllib\\request.py", line 1353, in do_open\n    raise URLError(err)\nurllib.error.URLError: <urlopen error [Errno 11001] getaddrinfo failed>\n'} 
+2020-06-06 18:53:03 - INFO - Teste PrimeControl - Processo teste PrimeControl iniciado. 
+2020-06-06 18:53:03 - INFO - Obter Ip Dinamicamente - Task iniciada. 
+2020-06-06 18:53:08 - DEBUG - Obter Ip Dinamicamente - Obter Ip externo concluído - 191.254.103.198. 
+2020-06-06 18:53:10 - INFO - Login Clash Royale API Website - Task iniciada. 
+2020-06-06 18:53:16 - DEBUG - Login Clash Royale API Website - Acessar URL concluído. 
+2020-06-06 18:53:16 - DEBUG - Login Clash Royale API Website - Clicar em Login concluído. 
+2020-06-06 18:53:18 - DEBUG - Login Clash Royale API Website - Realizar Login concluído. 
+2020-06-06 18:53:18 - INFO - Criar Nova Chave - Task Criar Nova Chave iniciada. 
+2020-06-06 18:53:18 - DEBUG - Criar Nova Chave - Clicar em dropdown button concluído. 
+2020-06-06 18:53:18 - DEBUG - Criar Nova Chave - Clicar em account menu concluído. 
+2020-06-06 18:53:18 - DEBUG - Criar Nova Chave - Clicar em create new key concluído. 
+2020-06-06 18:53:19 - DEBUG - Criar Nova Chave - Create new key concluído. 
+2020-06-06 18:53:22 - DEBUG - Criar Nova Chave - Acessar detalhes da nova chave concluído. 
+2020-06-06 18:53:22 - DEBUG - Criar Nova Chave - Recuperar Token concluído - eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjZhODU4ODRjLWVmNjktNDUyYS1iZmQzLTgwYmZiNzE2OGQzNyIsImlhdCI6MTU5MTQ4MDM5OSwic3ViIjoiZGV2ZWxvcGVyL2EyNTE1MTk5LTczY2UtOGQ1MC0wOTljLTdiYWM2M2Y1NjgzNSIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyIxOTEuMjU0LjEwMy4xOTgiXSwidHlwZSI6ImNsaWVudCJ9XX0.mBVAOu8e8Ffr-Y0WG_GyuZMcyo5C_iR8qJ7bOH3a2uaXw_eZJkTgdfz9jHq8xH8VgEabquYr9_Yowvd-BNHCWA. 
+2020-06-06 18:53:24 - INFO - Gerar csv - Task Gerar csv iniciada. 
+2020-06-06 18:53:28 - DEBUG - Gerar csv - Gerar csv concluído. 

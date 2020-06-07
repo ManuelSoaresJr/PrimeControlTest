@@ -1,0 +1,1106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.3 on win32)" generated="20200606 18:53:03.193" rpa="true">
+<suite id="s1" name="Main" source="C:\vsworkspaces\Robotframework\PrimeControlTest\main.robot">
+<test id="s1-t1" name="Obter Ip Dinamicamente">
+<kw name="Log Builder" library="logBuilder">
+<arguments>
+<arg>LEVEL=INFO</arg>
+<arg>MESSAGE=Processo teste PrimeControl iniciado.</arg>
+<arg>TASK=Teste PrimeControl</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+<arg>level=${LEVEL}</arg>
+<arg>console=yes</arg>
+</arguments>
+<msg timestamp="20200606 18:53:03.415" level="INFO">Processo teste PrimeControl iniciado.</msg>
+<status status="PASS" starttime="20200606 18:53:03.415" endtime="20200606 18:53:03.415"></status>
+</kw>
+<kw name="Get Time" library="BuiltIn">
+<doc>Returns the given time in the requested format.</doc>
+<arguments>
+<arg>NOW</arg>
+</arguments>
+<assign>
+<var>${currentTime}</var>
+</assign>
+<msg timestamp="20200606 18:53:03.416" level="INFO">${currentTime} = 2020-06-06 18:53:03</msg>
+<status status="PASS" starttime="20200606 18:53:03.416" endtime="20200606 18:53:03.416"></status>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<doc>Appends the given content to the specified file.</doc>
+<arguments>
+<arg>log/log.txt</arg>
+<arg>${currentTime} - ${LEVEL} - ${TASK} - ${MESSAGE} \n</arg>
+</arguments>
+<msg timestamp="20200606 18:53:03.417" level="INFO" html="yes">Appended to file '&lt;a href="file://C:\vsworkspaces\Robotframework\PrimeControlTest\log\log.txt"&gt;C:\vsworkspaces\Robotframework\PrimeControlTest\log\log.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20200606 18:53:03.416" endtime="20200606 18:53:03.417"></status>
+</kw>
+<status status="PASS" starttime="20200606 18:53:03.414" endtime="20200606 18:53:03.417"></status>
+</kw>
+<kw name="Log Builder" library="logBuilder">
+<arguments>
+<arg>LEVEL=INFO</arg>
+<arg>MESSAGE=Task iniciada.</arg>
+<arg>TASK=Obter Ip Dinamicamente</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+<arg>level=${LEVEL}</arg>
+<arg>console=yes</arg>
+</arguments>
+<msg timestamp="20200606 18:53:03.418" level="INFO">Task iniciada.</msg>
+<status status="PASS" starttime="20200606 18:53:03.418" endtime="20200606 18:53:03.418"></status>
+</kw>
+<kw name="Get Time" library="BuiltIn">
+<doc>Returns the given time in the requested format.</doc>
+<arguments>
+<arg>NOW</arg>
+</arguments>
+<assign>
+<var>${currentTime}</var>
+</assign>
+<msg timestamp="20200606 18:53:03.419" level="INFO">${currentTime} = 2020-06-06 18:53:03</msg>
+<status status="PASS" starttime="20200606 18:53:03.419" endtime="20200606 18:53:03.419"></status>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<doc>Appends the given content to the specified file.</doc>
+<arguments>
+<arg>log/log.txt</arg>
+<arg>${currentTime} - ${LEVEL} - ${TASK} - ${MESSAGE} \n</arg>
+</arguments>
+<msg timestamp="20200606 18:53:03.420" level="INFO" html="yes">Appended to file '&lt;a href="file://C:\vsworkspaces\Robotframework\PrimeControlTest\log\log.txt"&gt;C:\vsworkspaces\Robotframework\PrimeControlTest\log\log.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20200606 18:53:03.419" endtime="20200606 18:53:03.420"></status>
+</kw>
+<status status="PASS" starttime="20200606 18:53:03.417" endtime="20200606 18:53:03.420"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${IPURL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200606 18:53:03.421" level="INFO">Opening browser 'Chrome' to base url 'https://www.expressvpn.com/pt/what-is-my-ip'.</msg>
+<status status="PASS" starttime="20200606 18:53:03.421" endtime="20200606 18:53:08.746"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Element Is Visible</arg>
+<arg>class:ip-address</arg>
+<arg>7 s</arg>
+</arguments>
+<assign>
+<var>${STATUS}</var>
+</assign>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>class:ip-address</arg>
+<arg>7 s</arg>
+</arguments>
+<status status="PASS" starttime="20200606 18:53:08.747" endtime="20200606 18:53:08.773"></status>
+</kw>
+<msg timestamp="20200606 18:53:08.773" level="INFO">${STATUS} = True</msg>
+<status status="PASS" starttime="20200606 18:53:08.747" endtime="20200606 18:53:08.773"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${STATUS}==False</arg>
+<arg>ErrorLog Builder</arg>
+<arg>TASK=Obter Ip Dinamicamente</arg>
+<arg>MESSAGE=Site para verificação dinâmica de ip não está disponível.</arg>
+</arguments>
+<status status="PASS" starttime="20200606 18:53:08.774" endtime="20200606 18:53:08.774"></status>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>class:ip-address</arg>
+<arg>innerText</arg>
+</arguments>
+<assign>
+<var>${IP}</var>
+</assign>
+<msg timestamp="20200606 18:53:08.787" level="INFO">${IP} = 191.254.103.198</msg>
+<status status="PASS" starttime="20200606 18:53:08.774" endtime="20200606 18:53:08.787"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${IP}</arg>
+</arguments>
+<msg timestamp="20200606 18:53:08.788" level="INFO">${IP} = 191.254.103.198</msg>
+<status status="PASS" starttime="20200606 18:53:08.788" endtime="20200606 18:53:08.788"></status>
+</kw>
+<kw name="Log Builder" library="logBuilder">
+<arguments>
+<arg>LEVEL=DEBUG</arg>
+<arg>MESSAGE=Obter Ip externo concluído - ${IP}.</arg>
+<arg>TASK=Obter Ip Dinamicamente</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+<arg>level=${LEVEL}</arg>
+<arg>console=yes</arg>
+</arguments>
+<status status="PASS" starttime="20200606 18:53:08.789" endtime="20200606 18:53:08.790"></status>
+</kw>
+<kw name="Get Time" library="BuiltIn">
+<doc>Returns the given time in the requested format.</doc>
+<arguments>
+<arg>NOW</arg>
+</arguments>
+<assign>
+<var>${currentTime}</var>
+</assign>
+<msg timestamp="20200606 18:53:08.790" level="INFO">${currentTime} = 2020-06-06 18:53:08</msg>
+<status status="PASS" starttime="20200606 18:53:08.790" endtime="20200606 18:53:08.790"></status>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<doc>Appends the given content to the specified file.</doc>
+<arguments>
+<arg>log/log.txt</arg>
+<arg>${currentTime} - ${LEVEL} - ${TASK} - ${MESSAGE} \n</arg>
+</arguments>
+<msg timestamp="20200606 18:53:08.791" level="INFO" html="yes">Appended to file '&lt;a href="file://C:\vsworkspaces\Robotframework\PrimeControlTest\log\log.txt"&gt;C:\vsworkspaces\Robotframework\PrimeControlTest\log\log.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20200606 18:53:08.790" endtime="20200606 18:53:08.791"></status>
+</kw>
+<status status="PASS" starttime="20200606 18:53:08.788" endtime="20200606 18:53:08.791"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200606 18:53:08.792" endtime="20200606 18:53:10.896"></status>
+</kw>
+<doc>Obter o endereço ip externo da maquina local dinamicamente.</doc>
+<status status="PASS" starttime="20200606 18:53:03.413" endtime="20200606 18:53:10.896" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Login Clash Royale API Website">
+<kw name="Log Builder" library="logBuilder">
+<arguments>
+<arg>LEVEL=INFO</arg>
+<arg>MESSAGE=Task iniciada.</arg>
+<arg>TASK=Login Clash Royale API Website</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+<arg>level=${LEVEL}</arg>
+<arg>console=yes</arg>
+</arguments>
+<msg timestamp="20200606 18:53:10.896" level="INFO">Task iniciada.</msg>
+<status status="PASS" starttime="20200606 18:53:10.896" endtime="20200606 18:53:10.896"></status>
+</kw>
+<kw name="Get Time" library="BuiltIn">
+<doc>Returns the given time in the requested format.</doc>
+<arguments>
+<arg>NOW</arg>
+</arguments>
+<assign>
+<var>${currentTime}</var>
+</assign>
+<msg timestamp="20200606 18:53:10.896" level="INFO">${currentTime} = 2020-06-06 18:53:10</msg>
+<status status="PASS" starttime="20200606 18:53:10.896" endtime="20200606 18:53:10.896"></status>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<doc>Appends the given content to the specified file.</doc>
+<arguments>
+<arg>log/log.txt</arg>
+<arg>${currentTime} - ${LEVEL} - ${TASK} - ${MESSAGE} \n</arg>
+</arguments>
+<msg timestamp="20200606 18:53:10.896" level="INFO" html="yes">Appended to file '&lt;a href="file://C:\vsworkspaces\Robotframework\PrimeControlTest\log\log.txt"&gt;C:\vsworkspaces\Robotframework\PrimeControlTest\log\log.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20200606 18:53:10.896" endtime="20200606 18:53:10.896"></status>
+</kw>
+<status status="PASS" starttime="20200606 18:53:10.896" endtime="20200606 18:53:10.896"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200606 18:53:10.912" level="INFO">Opening browser 'Chrome' to base url 'https://developer.clashroyale.com/'.</msg>
+<status status="PASS" starttime="20200606 18:53:10.912" endtime="20200606 18:53:16.398"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Element Is Visible</arg>
+<arg>class:header__brand</arg>
+<arg>7 s</arg>
+</arguments>
+<assign>
+<var>${STATUS}</var>
+</assign>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>class:header__brand</arg>
+<arg>7 s</arg>
+</arguments>
+<status status="PASS" starttime="20200606 18:53:16.399" endtime="20200606 18:53:16.684"></status>
+</kw>
+<msg timestamp="20200606 18:53:16.684" level="INFO">${STATUS} = True</msg>
+<status status="PASS" starttime="20200606 18:53:16.399" endtime="20200606 18:53:16.684"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${STATUS}==False</arg>
+<arg>ErrorLog Builder</arg>
+<arg>TASK=Login Clash Royale API Website</arg>
+<arg>MESSAGE=Erro ao abrir a URL solicitada.</arg>
+</arguments>
+<status status="PASS" starttime="20200606 18:53:16.685" endtime="20200606 18:53:16.685"></status>
+</kw>
+<kw name="Log Builder" library="logBuilder">
+<arguments>
+<arg>LEVEL=DEBUG</arg>
+<arg>MESSAGE=Acessar URL concluído.</arg>
+<arg>TASK=Login Clash Royale API Website</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+<arg>level=${LEVEL}</arg>
+<arg>console=yes</arg>
+</arguments>
+<status status="PASS" starttime="20200606 18:53:16.686" endtime="20200606 18:53:16.688"></status>
+</kw>
+<kw name="Get Time" library="BuiltIn">
+<doc>Returns the given time in the requested format.</doc>
+<arguments>
+<arg>NOW</arg>
+</arguments>
+<assign>
+<var>${currentTime}</var>
+</assign>
+<msg timestamp="20200606 18:53:16.688" level="INFO">${currentTime} = 2020-06-06 18:53:16</msg>
+<status status="PASS" starttime="20200606 18:53:16.688" endtime="20200606 18:53:16.689"></status>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<doc>Appends the given content to the specified file.</doc>
+<arguments>
+<arg>log/log.txt</arg>
+<arg>${currentTime} - ${LEVEL} - ${TASK} - ${MESSAGE} \n</arg>
+</arguments>
+<msg timestamp="20200606 18:53:16.690" level="INFO" html="yes">Appended to file '&lt;a href="file://C:\vsworkspaces\Robotframework\PrimeControlTest\log\log.txt"&gt;C:\vsworkspaces\Robotframework\PrimeControlTest\log\log.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20200606 18:53:16.689" endtime="20200606 18:53:16.690"></status>
+</kw>
+<status status="PASS" starttime="20200606 18:53:16.686" endtime="20200606 18:53:16.690"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>dom:document.getElementsByClassName("login-menu")[0].lastChild</arg>
+</arguments>
+<msg timestamp="20200606 18:53:16.691" level="INFO">Clicking element 'dom:document.getElementsByClassName("login-menu")[0].lastChild'.</msg>
+<status status="PASS" starttime="20200606 18:53:16.691" endtime="20200606 18:53:16.769"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Element Is Visible</arg>
+<arg>id:email</arg>
+<arg>7 s</arg>
+</arguments>
+<assign>
+<var>${STATUS}</var>
+</assign>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>id:email</arg>
+<arg>7 s</arg>
+</arguments>
+<status status="PASS" starttime="20200606 18:53:16.770" endtime="20200606 18:53:16.800"></status>
+</kw>
+<msg timestamp="20200606 18:53:16.800" level="INFO">${STATUS} = True</msg>
+<status status="PASS" starttime="20200606 18:53:16.769" endtime="20200606 18:53:16.800"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${STATUS}==False</arg>
+<arg>ErrorLog Builder</arg>
+<arg>TASK=Login Clash Royale API Website</arg>
+<arg>MESSAGE=Elemento Log In não localizado.</arg>
+</arguments>
+<status status="PASS" starttime="20200606 18:53:16.801" endtime="20200606 18:53:16.801"></status>
+</kw>
+<kw name="Log Builder" library="logBuilder">
+<arguments>
+<arg>LEVEL=DEBUG</arg>
+<arg>MESSAGE=Clicar em Login concluído.</arg>
+<arg>TASK=Login Clash Royale API Website</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+<arg>level=${LEVEL}</arg>
+<arg>console=yes</arg>
+</arguments>
+<status status="PASS" starttime="20200606 18:53:16.802" endtime="20200606 18:53:16.802"></status>
+</kw>
+<kw name="Get Time" library="BuiltIn">
+<doc>Returns the given time in the requested format.</doc>
+<arguments>
+<arg>NOW</arg>
+</arguments>
+<assign>
+<var>${currentTime}</var>
+</assign>
+<msg timestamp="20200606 18:53:16.803" level="INFO">${currentTime} = 2020-06-06 18:53:16</msg>
+<status status="PASS" starttime="20200606 18:53:16.802" endtime="20200606 18:53:16.803"></status>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<doc>Appends the given content to the specified file.</doc>
+<arguments>
+<arg>log/log.txt</arg>
+<arg>${currentTime} - ${LEVEL} - ${TASK} - ${MESSAGE} \n</arg>
+</arguments>
+<msg timestamp="20200606 18:53:16.804" level="INFO" html="yes">Appended to file '&lt;a href="file://C:\vsworkspaces\Robotframework\PrimeControlTest\log\log.txt"&gt;C:\vsworkspaces\Robotframework\PrimeControlTest\log\log.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20200606 18:53:16.803" endtime="20200606 18:53:16.804"></status>
+</kw>
+<status status="PASS" starttime="20200606 18:53:16.801" endtime="20200606 18:53:16.804"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:email</arg>
+<arg>${USERID}</arg>
+</arguments>
+<msg timestamp="20200606 18:53:16.805" level="INFO">Typing text 'manuelsoaresjr@yahoo.com.br' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20200606 18:53:16.804" endtime="20200606 18:53:16.965"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:password</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20200606 18:53:16.965" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg timestamp="20200606 18:53:16.992" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20200606 18:53:17.052" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20200606 18:53:16.965" endtime="20200606 18:53:17.052"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>class:btn-primary</arg>
+</arguments>
+<msg timestamp="20200606 18:53:17.052" level="INFO">Clicking button 'class:btn-primary'.</msg>
+<status status="PASS" starttime="20200606 18:53:17.052" endtime="20200606 18:53:17.136"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Element Is Visible</arg>
+<arg>class:dropdown-toggle__text</arg>
+<arg>7 s</arg>
+</arguments>
+<assign>
+<var>${STATUS}</var>
+</assign>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>class:dropdown-toggle__text</arg>
+<arg>7 s</arg>
+</arguments>
+<status status="PASS" starttime="20200606 18:53:17.137" endtime="20200606 18:53:17.997"></status>
+</kw>
+<msg timestamp="20200606 18:53:17.997" level="INFO">${STATUS} = True</msg>
+<status status="PASS" starttime="20200606 18:53:17.137" endtime="20200606 18:53:17.997"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${STATUS}==False</arg>
+<arg>Error Handling</arg>
+<arg>TASK=Login Clash Royale API Website</arg>
+<arg>RECOVERY=True</arg>
+<arg>SCENE=1</arg>
+</arguments>
+<status status="PASS" starttime="20200606 18:53:17.998" endtime="20200606 18:53:17.998"></status>
+</kw>
+<kw name="Log Builder" library="logBuilder">
+<arguments>
+<arg>LEVEL=DEBUG</arg>
+<arg>MESSAGE=Realizar Login concluído.</arg>
+<arg>TASK=Login Clash Royale API Website</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+<arg>level=${LEVEL}</arg>
+<arg>console=yes</arg>
+</arguments>
+<status status="PASS" starttime="20200606 18:53:17.999" endtime="20200606 18:53:17.999"></status>
+</kw>
+<kw name="Get Time" library="BuiltIn">
+<doc>Returns the given time in the requested format.</doc>
+<arguments>
+<arg>NOW</arg>
+</arguments>
+<assign>
+<var>${currentTime}</var>
+</assign>
+<msg timestamp="20200606 18:53:18.000" level="INFO">${currentTime} = 2020-06-06 18:53:18</msg>
+<status status="PASS" starttime="20200606 18:53:17.999" endtime="20200606 18:53:18.000"></status>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<doc>Appends the given content to the specified file.</doc>
+<arguments>
+<arg>log/log.txt</arg>
+<arg>${currentTime} - ${LEVEL} - ${TASK} - ${MESSAGE} \n</arg>
+</arguments>
+<msg timestamp="20200606 18:53:18.001" level="INFO" html="yes">Appended to file '&lt;a href="file://C:\vsworkspaces\Robotframework\PrimeControlTest\log\log.txt"&gt;C:\vsworkspaces\Robotframework\PrimeControlTest\log\log.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20200606 18:53:18.000" endtime="20200606 18:53:18.001"></status>
+</kw>
+<status status="PASS" starttime="20200606 18:53:17.998" endtime="20200606 18:53:18.001"></status>
+</kw>
+<doc>Acessar o website https://developer.clashroyale.com/ e efetuar login</doc>
+<status status="PASS" starttime="20200606 18:53:10.896" endtime="20200606 18:53:18.002" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Criar Nova Chave">
+<kw name="Log Builder" library="logBuilder">
+<arguments>
+<arg>LEVEL=INFO</arg>
+<arg>MESSAGE=Task Criar Nova Chave iniciada.</arg>
+<arg>TASK=Criar Nova Chave</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+<arg>level=${LEVEL}</arg>
+<arg>console=yes</arg>
+</arguments>
+<msg timestamp="20200606 18:53:18.004" level="INFO">Task Criar Nova Chave iniciada.</msg>
+<status status="PASS" starttime="20200606 18:53:18.004" endtime="20200606 18:53:18.005"></status>
+</kw>
+<kw name="Get Time" library="BuiltIn">
+<doc>Returns the given time in the requested format.</doc>
+<arguments>
+<arg>NOW</arg>
+</arguments>
+<assign>
+<var>${currentTime}</var>
+</assign>
+<msg timestamp="20200606 18:53:18.005" level="INFO">${currentTime} = 2020-06-06 18:53:18</msg>
+<status status="PASS" starttime="20200606 18:53:18.005" endtime="20200606 18:53:18.005"></status>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<doc>Appends the given content to the specified file.</doc>
+<arguments>
+<arg>log/log.txt</arg>
+<arg>${currentTime} - ${LEVEL} - ${TASK} - ${MESSAGE} \n</arg>
+</arguments>
+<msg timestamp="20200606 18:53:18.006" level="INFO" html="yes">Appended to file '&lt;a href="file://C:\vsworkspaces\Robotframework\PrimeControlTest\log\log.txt"&gt;C:\vsworkspaces\Robotframework\PrimeControlTest\log\log.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20200606 18:53:18.005" endtime="20200606 18:53:18.006"></status>
+</kw>
+<status status="PASS" starttime="20200606 18:53:18.004" endtime="20200606 18:53:18.006"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Click Button</arg>
+<arg>class:dropdown-toggle</arg>
+</arguments>
+<assign>
+<var>${STATUS}</var>
+</assign>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>class:dropdown-toggle</arg>
+</arguments>
+<msg timestamp="20200606 18:53:18.007" level="INFO">Clicking button 'class:dropdown-toggle'.</msg>
+<status status="PASS" starttime="20200606 18:53:18.006" endtime="20200606 18:53:18.062"></status>
+</kw>
+<msg timestamp="20200606 18:53:18.062" level="INFO">${STATUS} = True</msg>
+<status status="PASS" starttime="20200606 18:53:18.006" endtime="20200606 18:53:18.062"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${STATUS}==False</arg>
+<arg>ErrorLog Builder</arg>
+<arg>TASK=Criar Nova Chave</arg>
+<arg>MESSAGE=Falha ao clicar no drop-down menu.</arg>
+</arguments>
+<status status="PASS" starttime="20200606 18:53:18.063" endtime="20200606 18:53:18.063"></status>
+</kw>
+<kw name="Log Builder" library="logBuilder">
+<arguments>
+<arg>LEVEL=DEBUG</arg>
+<arg>MESSAGE=Clicar em dropdown button concluído.</arg>
+<arg>TASK=Criar Nova Chave</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+<arg>level=${LEVEL}</arg>
+<arg>console=yes</arg>
+</arguments>
+<status status="PASS" starttime="20200606 18:53:18.064" endtime="20200606 18:53:18.065"></status>
+</kw>
+<kw name="Get Time" library="BuiltIn">
+<doc>Returns the given time in the requested format.</doc>
+<arguments>
+<arg>NOW</arg>
+</arguments>
+<assign>
+<var>${currentTime}</var>
+</assign>
+<msg timestamp="20200606 18:53:18.065" level="INFO">${currentTime} = 2020-06-06 18:53:18</msg>
+<status status="PASS" starttime="20200606 18:53:18.065" endtime="20200606 18:53:18.065"></status>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<doc>Appends the given content to the specified file.</doc>
+<arguments>
+<arg>log/log.txt</arg>
+<arg>${currentTime} - ${LEVEL} - ${TASK} - ${MESSAGE} \n</arg>
+</arguments>
+<msg timestamp="20200606 18:53:18.066" level="INFO" html="yes">Appended to file '&lt;a href="file://C:\vsworkspaces\Robotframework\PrimeControlTest\log\log.txt"&gt;C:\vsworkspaces\Robotframework\PrimeControlTest\log\log.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20200606 18:53:18.065" endtime="20200606 18:53:18.066"></status>
+</kw>
+<status status="PASS" starttime="20200606 18:53:18.064" endtime="20200606 18:53:18.066"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Click Element</arg>
+<arg>dom:document.getElementsByClassName("dropdown-menu")[0].firstElementChild</arg>
+</arguments>
+<assign>
+<var>${STATUS}</var>
+</assign>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>dom:document.getElementsByClassName("dropdown-menu")[0].firstElementChild</arg>
+</arguments>
+<msg timestamp="20200606 18:53:18.067" level="INFO">Clicking element 'dom:document.getElementsByClassName("dropdown-menu")[0].firstElementChild'.</msg>
+<status status="PASS" starttime="20200606 18:53:18.067" endtime="20200606 18:53:18.134"></status>
+</kw>
+<msg timestamp="20200606 18:53:18.134" level="INFO">${STATUS} = True</msg>
+<status status="PASS" starttime="20200606 18:53:18.067" endtime="20200606 18:53:18.134"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${STATUS}==False</arg>
+<arg>ErrorLog Builder</arg>
+<arg>TASK=Criar Nova Chave</arg>
+<arg>MESSAGE=Falha ao clicar no sub menu account.</arg>
+</arguments>
+<status status="PASS" starttime="20200606 18:53:18.135" endtime="20200606 18:53:18.135"></status>
+</kw>
+<kw name="Log Builder" library="logBuilder">
+<arguments>
+<arg>LEVEL=DEBUG</arg>
+<arg>MESSAGE=Clicar em account menu concluído.</arg>
+<arg>TASK=Criar Nova Chave</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+<arg>level=${LEVEL}</arg>
+<arg>console=yes</arg>
+</arguments>
+<status status="PASS" starttime="20200606 18:53:18.136" endtime="20200606 18:53:18.136"></status>
+</kw>
+<kw name="Get Time" library="BuiltIn">
+<doc>Returns the given time in the requested format.</doc>
+<arguments>
+<arg>NOW</arg>
+</arguments>
+<assign>
+<var>${currentTime}</var>
+</assign>
+<msg timestamp="20200606 18:53:18.137" level="INFO">${currentTime} = 2020-06-06 18:53:18</msg>
+<status status="PASS" starttime="20200606 18:53:18.136" endtime="20200606 18:53:18.137"></status>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<doc>Appends the given content to the specified file.</doc>
+<arguments>
+<arg>log/log.txt</arg>
+<arg>${currentTime} - ${LEVEL} - ${TASK} - ${MESSAGE} \n</arg>
+</arguments>
+<msg timestamp="20200606 18:53:18.138" level="INFO" html="yes">Appended to file '&lt;a href="file://C:\vsworkspaces\Robotframework\PrimeControlTest\log\log.txt"&gt;C:\vsworkspaces\Robotframework\PrimeControlTest\log\log.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20200606 18:53:18.137" endtime="20200606 18:53:18.138"></status>
+</kw>
+<status status="PASS" starttime="20200606 18:53:18.135" endtime="20200606 18:53:18.138"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Click Element</arg>
+<arg>class:create-key-btn</arg>
+</arguments>
+<assign>
+<var>${STATUS}</var>
+</assign>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:create-key-btn</arg>
+</arguments>
+<msg timestamp="20200606 18:53:18.140" level="INFO">Clicking element 'class:create-key-btn'.</msg>
+<status status="PASS" starttime="20200606 18:53:18.139" endtime="20200606 18:53:18.224"></status>
+</kw>
+<msg timestamp="20200606 18:53:18.224" level="INFO">${STATUS} = True</msg>
+<status status="PASS" starttime="20200606 18:53:18.139" endtime="20200606 18:53:18.224"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${STATUS}==False</arg>
+<arg>ErrorLog Builder</arg>
+<arg>TASK=Criar Nova Chave</arg>
+<arg>MESSAGE=Falha ao clicar no botão criar nova chave.</arg>
+</arguments>
+<status status="PASS" starttime="20200606 18:53:18.224" endtime="20200606 18:53:18.225"></status>
+</kw>
+<kw name="Log Builder" library="logBuilder">
+<arguments>
+<arg>LEVEL=DEBUG</arg>
+<arg>MESSAGE=Clicar em create new key concluído.</arg>
+<arg>TASK=Criar Nova Chave</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+<arg>level=${LEVEL}</arg>
+<arg>console=yes</arg>
+</arguments>
+<status status="PASS" starttime="20200606 18:53:18.226" endtime="20200606 18:53:18.227"></status>
+</kw>
+<kw name="Get Time" library="BuiltIn">
+<doc>Returns the given time in the requested format.</doc>
+<arguments>
+<arg>NOW</arg>
+</arguments>
+<assign>
+<var>${currentTime}</var>
+</assign>
+<msg timestamp="20200606 18:53:18.227" level="INFO">${currentTime} = 2020-06-06 18:53:18</msg>
+<status status="PASS" starttime="20200606 18:53:18.227" endtime="20200606 18:53:18.227"></status>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<doc>Appends the given content to the specified file.</doc>
+<arguments>
+<arg>log/log.txt</arg>
+<arg>${currentTime} - ${LEVEL} - ${TASK} - ${MESSAGE} \n</arg>
+</arguments>
+<msg timestamp="20200606 18:53:18.228" level="INFO" html="yes">Appended to file '&lt;a href="file://C:\vsworkspaces\Robotframework\PrimeControlTest\log\log.txt"&gt;C:\vsworkspaces\Robotframework\PrimeControlTest\log\log.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20200606 18:53:18.227" endtime="20200606 18:53:18.228"></status>
+</kw>
+<status status="PASS" starttime="20200606 18:53:18.226" endtime="20200606 18:53:18.228"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:name</arg>
+<arg>${KEYNAME}</arg>
+</arguments>
+<msg timestamp="20200606 18:53:18.229" level="INFO">Typing text 'Teste' into text field 'id:name'.</msg>
+<status status="PASS" starttime="20200606 18:53:18.229" endtime="20200606 18:53:18.327"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:description</arg>
+<arg>${KEYDSC}</arg>
+</arguments>
+<msg timestamp="20200606 18:53:18.328" level="INFO">Typing text 'Chave para acesso a API Clash Royale pelo robo de teste PrimeControl.' into text field 'id:description'.</msg>
+<status status="PASS" starttime="20200606 18:53:18.328" endtime="20200606 18:53:18.752"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:range-0</arg>
+<arg>${IP}</arg>
+</arguments>
+<msg timestamp="20200606 18:53:18.753" level="INFO">Typing text '191.254.103.198' into text field 'id:range-0'.</msg>
+<status status="PASS" starttime="20200606 18:53:18.752" endtime="20200606 18:53:18.867"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>class:btn-primary</arg>
+</arguments>
+<msg timestamp="20200606 18:53:18.868" level="INFO">Clicking button 'class:btn-primary'.</msg>
+<status status="PASS" starttime="20200606 18:53:18.868" endtime="20200606 18:53:18.948"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Element Is Visible</arg>
+<arg>class:alert-success</arg>
+<arg>7 s</arg>
+</arguments>
+<assign>
+<var>${STATUS}</var>
+</assign>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>class:alert-success</arg>
+<arg>7 s</arg>
+</arguments>
+<status status="PASS" starttime="20200606 18:53:18.950" endtime="20200606 18:53:19.390"></status>
+</kw>
+<msg timestamp="20200606 18:53:19.390" level="INFO">${STATUS} = True</msg>
+<status status="PASS" starttime="20200606 18:53:18.949" endtime="20200606 18:53:19.390"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${STATUS}==False</arg>
+<arg>ErrorLog Builder</arg>
+<arg>TASK=Criar Nova Chave</arg>
+<arg>MESSAGE=Falha ao criar nova chave.</arg>
+</arguments>
+<status status="PASS" starttime="20200606 18:53:19.390" endtime="20200606 18:53:19.392"></status>
+</kw>
+<kw name="Log Builder" library="logBuilder">
+<arguments>
+<arg>LEVEL=DEBUG</arg>
+<arg>MESSAGE=Create new key concluído.</arg>
+<arg>TASK=Criar Nova Chave</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+<arg>level=${LEVEL}</arg>
+<arg>console=yes</arg>
+</arguments>
+<status status="PASS" starttime="20200606 18:53:19.393" endtime="20200606 18:53:19.394"></status>
+</kw>
+<kw name="Get Time" library="BuiltIn">
+<doc>Returns the given time in the requested format.</doc>
+<arguments>
+<arg>NOW</arg>
+</arguments>
+<assign>
+<var>${currentTime}</var>
+</assign>
+<msg timestamp="20200606 18:53:19.395" level="INFO">${currentTime} = 2020-06-06 18:53:19</msg>
+<status status="PASS" starttime="20200606 18:53:19.394" endtime="20200606 18:53:19.395"></status>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<doc>Appends the given content to the specified file.</doc>
+<arguments>
+<arg>log/log.txt</arg>
+<arg>${currentTime} - ${LEVEL} - ${TASK} - ${MESSAGE} \n</arg>
+</arguments>
+<msg timestamp="20200606 18:53:19.396" level="INFO" html="yes">Appended to file '&lt;a href="file://C:\vsworkspaces\Robotframework\PrimeControlTest\log\log.txt"&gt;C:\vsworkspaces\Robotframework\PrimeControlTest\log\log.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20200606 18:53:19.395" endtime="20200606 18:53:19.396"></status>
+</kw>
+<status status="PASS" starttime="20200606 18:53:19.392" endtime="20200606 18:53:19.396"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3 s</arg>
+</arguments>
+<msg timestamp="20200606 18:53:22.397" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200606 18:53:19.397" endtime="20200606 18:53:22.397"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>dom:document.getElementsByClassName('api-keys')[0].childNodes[1].childNodes[0]</arg>
+</arguments>
+<msg timestamp="20200606 18:53:22.397" level="INFO">Clicking element 'dom:document.getElementsByClassName('api-keys')[0].childNodes[1].childNodes[0]'.</msg>
+<status status="PASS" starttime="20200606 18:53:22.397" endtime="20200606 18:53:22.463"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Element Is Visible</arg>
+<arg>class:delete-btn</arg>
+<arg>7 s</arg>
+</arguments>
+<assign>
+<var>${STATUS}</var>
+</assign>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>class:delete-btn</arg>
+<arg>7 s</arg>
+</arguments>
+<status status="PASS" starttime="20200606 18:53:22.464" endtime="20200606 18:53:22.481"></status>
+</kw>
+<msg timestamp="20200606 18:53:22.482" level="INFO">${STATUS} = True</msg>
+<status status="PASS" starttime="20200606 18:53:22.464" endtime="20200606 18:53:22.482"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${STATUS}==False</arg>
+<arg>ErrorLog Builder</arg>
+<arg>TASK=Criar Nova Chave</arg>
+<arg>MESSAGE=Falha ao acessar detalhes da nova chave.</arg>
+</arguments>
+<status status="PASS" starttime="20200606 18:53:22.482" endtime="20200606 18:53:22.482"></status>
+</kw>
+<kw name="Log Builder" library="logBuilder">
+<arguments>
+<arg>LEVEL=DEBUG</arg>
+<arg>MESSAGE=Acessar detalhes da nova chave concluído.</arg>
+<arg>TASK=Criar Nova Chave</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+<arg>level=${LEVEL}</arg>
+<arg>console=yes</arg>
+</arguments>
+<status status="PASS" starttime="20200606 18:53:22.483" endtime="20200606 18:53:22.484"></status>
+</kw>
+<kw name="Get Time" library="BuiltIn">
+<doc>Returns the given time in the requested format.</doc>
+<arguments>
+<arg>NOW</arg>
+</arguments>
+<assign>
+<var>${currentTime}</var>
+</assign>
+<msg timestamp="20200606 18:53:22.484" level="INFO">${currentTime} = 2020-06-06 18:53:22</msg>
+<status status="PASS" starttime="20200606 18:53:22.484" endtime="20200606 18:53:22.484"></status>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<doc>Appends the given content to the specified file.</doc>
+<arguments>
+<arg>log/log.txt</arg>
+<arg>${currentTime} - ${LEVEL} - ${TASK} - ${MESSAGE} \n</arg>
+</arguments>
+<msg timestamp="20200606 18:53:22.485" level="INFO" html="yes">Appended to file '&lt;a href="file://C:\vsworkspaces\Robotframework\PrimeControlTest\log\log.txt"&gt;C:\vsworkspaces\Robotframework\PrimeControlTest\log\log.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20200606 18:53:22.484" endtime="20200606 18:53:22.485"></status>
+</kw>
+<status status="PASS" starttime="20200606 18:53:22.483" endtime="20200606 18:53:22.485"></status>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>dom:document.getElementsByClassName('input-lg')[0].firstElementChild</arg>
+<arg>textContent</arg>
+</arguments>
+<assign>
+<var>${TOKEN}</var>
+</assign>
+<msg timestamp="20200606 18:53:22.497" level="INFO">${TOKEN} = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjZhODU4ODRjLWVmNjktNDUyYS1iZmQzLTg...</msg>
+<status status="PASS" starttime="20200606 18:53:22.486" endtime="20200606 18:53:22.497"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${TOKEN}</arg>
+</arguments>
+<msg timestamp="20200606 18:53:22.497" level="INFO">${TOKEN} = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjZhODU4ODRjLWVmNjktNDUyYS1iZmQzLTg...</msg>
+<status status="PASS" starttime="20200606 18:53:22.497" endtime="20200606 18:53:22.497"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${TOKEN}"=="${None}"</arg>
+<arg>ErrorLog Builder</arg>
+<arg>TASK=Criar Nova Chave</arg>
+<arg>MESSAGE=Não foi possível recuperar o token.</arg>
+</arguments>
+<status status="PASS" starttime="20200606 18:53:22.497" endtime="20200606 18:53:22.498"></status>
+</kw>
+<kw name="Log Builder" library="logBuilder">
+<arguments>
+<arg>LEVEL=DEBUG</arg>
+<arg>MESSAGE=Recuperar Token concluído - ${TOKEN}.</arg>
+<arg>TASK=Criar Nova Chave</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+<arg>level=${LEVEL}</arg>
+<arg>console=yes</arg>
+</arguments>
+<status status="PASS" starttime="20200606 18:53:22.498" endtime="20200606 18:53:22.499"></status>
+</kw>
+<kw name="Get Time" library="BuiltIn">
+<doc>Returns the given time in the requested format.</doc>
+<arguments>
+<arg>NOW</arg>
+</arguments>
+<assign>
+<var>${currentTime}</var>
+</assign>
+<msg timestamp="20200606 18:53:22.499" level="INFO">${currentTime} = 2020-06-06 18:53:22</msg>
+<status status="PASS" starttime="20200606 18:53:22.499" endtime="20200606 18:53:22.499"></status>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<doc>Appends the given content to the specified file.</doc>
+<arguments>
+<arg>log/log.txt</arg>
+<arg>${currentTime} - ${LEVEL} - ${TASK} - ${MESSAGE} \n</arg>
+</arguments>
+<msg timestamp="20200606 18:53:22.500" level="INFO" html="yes">Appended to file '&lt;a href="file://C:\vsworkspaces\Robotframework\PrimeControlTest\log\log.txt"&gt;C:\vsworkspaces\Robotframework\PrimeControlTest\log\log.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20200606 18:53:22.500" endtime="20200606 18:53:22.501"></status>
+</kw>
+<status status="PASS" starttime="20200606 18:53:22.498" endtime="20200606 18:53:22.501"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200606 18:53:22.501" endtime="20200606 18:53:24.590"></status>
+</kw>
+<doc>Criar uma chave de acesso para API Clash Royale vinculado ao usuário utilizado.</doc>
+<status status="PASS" starttime="20200606 18:53:18.003" endtime="20200606 18:53:24.590" critical="yes"></status>
+</test>
+<test id="s1-t4" name="Gerar csv">
+<kw name="Log Builder" library="logBuilder">
+<arguments>
+<arg>LEVEL=INFO</arg>
+<arg>MESSAGE=Task Gerar csv iniciada.</arg>
+<arg>TASK=Gerar csv</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+<arg>level=${LEVEL}</arg>
+<arg>console=yes</arg>
+</arguments>
+<msg timestamp="20200606 18:53:24.590" level="INFO">Task Gerar csv iniciada.</msg>
+<status status="PASS" starttime="20200606 18:53:24.590" endtime="20200606 18:53:24.590"></status>
+</kw>
+<kw name="Get Time" library="BuiltIn">
+<doc>Returns the given time in the requested format.</doc>
+<arguments>
+<arg>NOW</arg>
+</arguments>
+<assign>
+<var>${currentTime}</var>
+</assign>
+<msg timestamp="20200606 18:53:24.590" level="INFO">${currentTime} = 2020-06-06 18:53:24</msg>
+<status status="PASS" starttime="20200606 18:53:24.590" endtime="20200606 18:53:24.590"></status>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<doc>Appends the given content to the specified file.</doc>
+<arguments>
+<arg>log/log.txt</arg>
+<arg>${currentTime} - ${LEVEL} - ${TASK} - ${MESSAGE} \n</arg>
+</arguments>
+<msg timestamp="20200606 18:53:24.590" level="INFO" html="yes">Appended to file '&lt;a href="file://C:\vsworkspaces\Robotframework\PrimeControlTest\log\log.txt"&gt;C:\vsworkspaces\Robotframework\PrimeControlTest\log\log.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20200606 18:53:24.590" endtime="20200606 18:53:24.590"></status>
+</kw>
+<status status="PASS" starttime="20200606 18:53:24.590" endtime="20200606 18:53:24.590"></status>
+</kw>
+<kw name="Generate ClanMembers Csv" library="generateClanMembersCsv">
+<arguments>
+<arg>${CLANNAME}</arg>
+<arg>${LOCATION}</arg>
+<arg>${TOKEN}</arg>
+</arguments>
+<assign>
+<var>${STATUS}</var>
+</assign>
+<msg timestamp="20200606 18:53:28.429" level="INFO">${STATUS} = {'status': 'Success', 'details': ''}</msg>
+<status status="PASS" starttime="20200606 18:53:24.590" endtime="20200606 18:53:28.429"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${STATUS['status']}"!="Success"</arg>
+<arg>ErrorLog Builder</arg>
+<arg>TASK=Criar Nova Chave</arg>
+<arg>MESSAGE=${STATUS}</arg>
+</arguments>
+<status status="PASS" starttime="20200606 18:53:28.429" endtime="20200606 18:53:28.429"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${STATUS['status']}"=="Success"</arg>
+<arg>Log Builder</arg>
+<arg>LEVEL=DEBUG</arg>
+<arg>MESSAGE=Gerar csv concluído.</arg>
+<arg>TASK=Gerar csv</arg>
+</arguments>
+<kw name="Log Builder" library="logBuilder">
+<arguments>
+<arg>LEVEL=DEBUG</arg>
+<arg>MESSAGE=Gerar csv concluído.</arg>
+<arg>TASK=Gerar csv</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+<arg>level=${LEVEL}</arg>
+<arg>console=yes</arg>
+</arguments>
+<status status="PASS" starttime="20200606 18:53:28.429" endtime="20200606 18:53:28.429"></status>
+</kw>
+<kw name="Get Time" library="BuiltIn">
+<doc>Returns the given time in the requested format.</doc>
+<arguments>
+<arg>NOW</arg>
+</arguments>
+<assign>
+<var>${currentTime}</var>
+</assign>
+<msg timestamp="20200606 18:53:28.429" level="INFO">${currentTime} = 2020-06-06 18:53:28</msg>
+<status status="PASS" starttime="20200606 18:53:28.429" endtime="20200606 18:53:28.429"></status>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<doc>Appends the given content to the specified file.</doc>
+<arguments>
+<arg>log/log.txt</arg>
+<arg>${currentTime} - ${LEVEL} - ${TASK} - ${MESSAGE} \n</arg>
+</arguments>
+<msg timestamp="20200606 18:53:28.429" level="INFO" html="yes">Appended to file '&lt;a href="file://C:\vsworkspaces\Robotframework\PrimeControlTest\log\log.txt"&gt;C:\vsworkspaces\Robotframework\PrimeControlTest\log\log.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20200606 18:53:28.429" endtime="20200606 18:53:28.429"></status>
+</kw>
+<status status="PASS" starttime="20200606 18:53:28.429" endtime="20200606 18:53:28.429"></status>
+</kw>
+<status status="PASS" starttime="20200606 18:53:28.429" endtime="20200606 18:53:28.429"></status>
+</kw>
+<doc>Atraves de um script em python, utiliza a API clash royale com o token obtido, recupera os dados necessários e gera o CSV experado na pasta results.</doc>
+<status status="PASS" starttime="20200606 18:53:24.590" endtime="20200606 18:53:28.429" critical="yes"></status>
+</test>
+<doc>Workflow teste para PrimeControl. Acessar o site de developer do clashroyale, obter uma lista de membros de um determinado clan e exportar em csv</doc>
+<status status="PASS" starttime="20200606 18:53:03.194" endtime="20200606 18:53:28.429"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0">Critical Tasks</stat>
+<stat pass="4" fail="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" id="s1" name="Main">Main</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
